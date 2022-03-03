@@ -1,7 +1,7 @@
 let cont = 2;
+mudarFoco();
 let botaoAdd = document.querySelector("#add");
-botaoAdd.addEventListener('click', function()
-{
+botaoAdd.addEventListener('click', function () {
     cont++;
     let div = document.createElement('div');
     div.classList.add('sorteios');
@@ -9,11 +9,10 @@ botaoAdd.addEventListener('click', function()
     <input id="opcoes">`
     let pai = document.querySelector('#secaoSorteios');
     pai.appendChild(div);
-    console.log(div);
+    mudarFoco();
 });
 let botaoFinalizar = document.querySelector('#finalizar');
-botaoFinalizar.addEventListener('click', function()
-{
+botaoFinalizar.addEventListener('click', function () {
     let pos = Math.floor(Math.random() * cont);
     console.log(pos);
     let divs = document.querySelectorAll('.sorteios');
@@ -26,3 +25,16 @@ botaoFinalizar.addEventListener('click', function()
     inputResultado.value = inputSelecionada.value;
 
 });
+function mudarFoco() {
+    let inputs = document.querySelectorAll('#opcoes');
+    for (let i = 0; i < cont; i++) {
+        inputs[i].addEventListener('keyup', function (e) {
+            switch (e.key) {
+                case "ArrowDown":
+                    inputs[i + 1].focus(); break;
+                case "ArrowUp":
+                    inputs[i - 1].focus(); break;
+            }
+        });
+    }
+}

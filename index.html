@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="est.css">
+    <link rel="icon" href="trevo.png">
+    <title>Sorteios</title>
 </head>
 
 <body>
     <header>
         <h1><img src="trevo.png">Sorteios</h1>
-    
-</header>
-<main>
-    <section id="secaoSorteios">
-        <h2>Sorteie qualquer coisa!</h2>
-        <div class="sorteios selecionado">
-            <label for="opcoes">Opção 1:</label>
-            <input id="opcoes">
+    </header>
+    <main>
+        <section id="secaoSorteios">
+            <h2>Sorteie qualquer coisa!</h2>
+            <div class="sorteios selecionado">
+                <label for="opcoes">Opção 1:</label>
+                <input id="opcoes">
+            </div>
+            <div class="sorteios selecionado">
+                <label for="opcoes">Opção 2:</label>
+                <input id="opcoes">
+            </div>
+        </section>
+        <div id="botoes">
+            <button id="add">Adicionar uma Opcão</button>
+            <button id="finalizar">Sortear!</button>
         </div>
-        <div class="sorteios selecionado">
-            <label for="opcoes">Opção 2:</label>
-            <input id="opcoes">
+        <div id="final">
+            <label id="result" for="resultado">Resultado:</label>
+            <input readonly id="resultado">
         </div>
-    </section>
-    <div id="botoes">
-        <button id="add">Adicionar uma Opcão</button>
-        <button id="finalizar">Sortear!</button>
-    </div>
-    <div id="final">
-        <label id="result" for="resultado">Resultado:</label>
-        <input readonly id="resultado">
-    </div>
-</main>
+    </main>
     <script src="sorteio.js"></script>
+
 
 </body>
 
